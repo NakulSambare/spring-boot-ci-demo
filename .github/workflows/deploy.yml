@@ -17,7 +17,7 @@ jobs:
                 docker build \
                   -f spring-boot-ci-demo/Dockerfile \
                   -t my-image-name:${{ github.run_number }} \
-                  spring-boot-app
+                  spring-boot-ci-demo
 
     - name: Setup Java
       uses: actions/setup-java@v5
