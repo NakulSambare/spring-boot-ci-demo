@@ -13,11 +13,7 @@ jobs:
 
     steps:
     - name: Checkout Code
-      run: |
-                docker build \
-                  -f spring-boot-ci-demo/Dockerfile \
-                  -t my-image-name:${{ github.run_number }} \
-                  spring-boot-ci-demo
+      uses: actions/checkout@v4
 
     - name: Setup Java
       uses: actions/setup-java@v5
