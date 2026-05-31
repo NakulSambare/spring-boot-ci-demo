@@ -13,7 +13,11 @@ jobs:
 
     steps:
     - name: Checkout Code
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: |
+                docker build \
+                  -f spring-boot-app/Dockerfile \
+                  -t my-image-name:${{ github.run_number }} \
+                  spring-boot-app
 
     - name: Setup Java
       uses: actions/setup-java@v5
