@@ -15,7 +15,7 @@ jobs:
     - name: Checkout Code
       run: |
                 docker build \
-                  -f spring-boot-app/Dockerfile \
+                  -f spring-boot-ci-demo/Dockerfile \
                   -t my-image-name:${{ github.run_number }} \
                   spring-boot-app
 
